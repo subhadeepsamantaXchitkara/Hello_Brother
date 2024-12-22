@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <link rel="stylesheet" href="bro.css">
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h1>Happy Birthday!</h1>
+        </div>
+        <div class="image-container">
+            <img src="DALL·E 2024-12-22 10.06.58 - A beautiful birthday cake designed for someone named Saheb. The cake is a two-tiered chocolate and vanilla combination, decorated with colorful frosti.webp" alt="Birthday Celebration" border="0">
+        </div>
+        
+        <div class="additional-images">
+            <img id="me1" src="Choco.webp" alt="Image 1" class="additional-image">
+            <img id="me2" src="Scott Mccall and Stiles Stilinki _You're my brother_.jpeg" alt="Image 2" class="additional-image">
+        </div>
+        
+        <audio id="birthday-song" src="Illuminati(PagalNew.Com.Se).mp3"></audio>
+
+        <div class="content">
+            <button id="play-button" class="play-button">Click Me!</button>
+            <p>
+                <b>"Happy Birthday, Saheb!
+                    Wishing you a day full of joy and celebration. May all your dreams come true, and may you achieve great success in life. Have an amazing birthday filled with love, laughter, and happiness! 🎉🎂"</b>
+                <br><br>
+                <b>With love and best wishes,<br>
+                Subhadeep😊</b>
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>The</p>
+            <p>...BakBencher-1👨🏻‍💻...</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('play-button').addEventListener('click', function() {
+            const button = this;
+            const song = document.getElementById('birthday-song');
+
+            button.textContent = "Wait a few seconds !";
+
+            if (song.paused) {
+                song.play().then(() => {
+                    console.log("Audio is playing.");
+                }).catch(error => {
+                    console.error("Error playing audio:", error);
+                });
+            } else {
+                song.pause();
+                console.log("Audio paused.");
+            }
+        });
+    </script>
+</body>
+</html>
